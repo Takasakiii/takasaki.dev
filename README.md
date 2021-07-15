@@ -1,3 +1,6 @@
+# takasaki.dev
+Apenas uma webpage para o dominio [takasaki.dev](https://takasaki.dev) usando como base Wasm.
+
 ### Licensas e direitos:
  * Os arquivos listados abaixo são criados e distribuidos pela [Font Awesome](https://fontawesome.com/) sobre a licença CC BY 4.0:
     * `./assets/svgs/github-brands.svg`
