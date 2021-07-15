@@ -34,7 +34,7 @@ $big: multiple-stars-box(100);
     background: transparent;
     box-shadow: $medium;
     border-radius: 50%;
-    animation: animate-stars 50s linear infinite;
+    animation: animate-stars 40s linear infinite;
 
     &:after {
         content: '';
@@ -54,7 +54,7 @@ $big: multiple-stars-box(100);
     background: transparent;
     box-shadow: $big;
     border-radius: 50%;
-    animation: animate-stars 50s linear infinite;
+    animation: animate-stars 30s linear infinite;
 
     &:after {
         content: '';
