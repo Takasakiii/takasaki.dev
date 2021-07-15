@@ -1,0 +1,52 @@
+@import 'extras/stars.scss';
+
+.home-page {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+
+    &__flex {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+    }
+
+    &__content {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        color: white;
+
+        &__title {
+            font-size: 4rem;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        &__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                margin-left: 1rem;
+            }
+
+            img {
+                filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(354deg) brightness(106%) contrast(101%);
+                width: 2rem;
+            }
+
+            &--matrix {
+                width: 3rem !important;
+            }
+        }
+    }
+}

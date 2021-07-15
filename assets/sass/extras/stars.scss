@@ -1,0 +1,79 @@
+@function multiple-stars-box($n) {
+    $value: '#{random(2000)}px #{random(2000)}px #ffffff';
+    @for $i from 2 through $n {
+        $value: '#{$value}, #{random(2000)}px #{random(2000)}px #ffffff';
+    }
+    @return unquote($value)
+}
+
+$small: multiple-stars-box(700);
+$medium: multiple-stars-box(200);
+$big: multiple-stars-box(100);
+
+.stars-animation {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $small;
+    animation: animate-stars 50s linear infinite;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 2000px;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $small;
+    }
+}
+
+.stats2-animation{
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $medium;
+    border-radius: 50%;
+    animation: animate-stars 50s linear infinite;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 2000px;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $medium;
+        border-radius: 50%;
+    }
+}
+
+.stars3-animation {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $big;
+    border-radius: 50%;
+    animation: animate-stars 50s linear infinite;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 2000px;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: $big;
+        border-radius: 50%;
+    }
+}
+
+@keyframes animate-stars {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
+}

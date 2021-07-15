@@ -1,3 +1,5 @@
+mod home;
+
 use yew::{html, Component};
 use yew_router::{router::Router, Switch};
 
@@ -30,7 +32,7 @@ impl Component for App {
             <Router<AppRouter, ()>
                 render = Router::render(|switch: AppRouter| {
                     match switch {
-                        AppRouter::Home => html!{}
+                        AppRouter::Home => html!{<home::HomePage />}
                     }
                 })
             />
